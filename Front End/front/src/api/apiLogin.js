@@ -2,12 +2,12 @@ import apiClient from './clientBasicAuth';
 
 const endpoint = "/login";
 
-export const getLogin = async (email, password, cancelToken)=>{
+export const getLogin = async (username, password, cancelToken)=>{
     let error;
     let user;
     
 
-    const response = await apiClient(email, password, cancelToken).get(endpoint);
+    const response = await apiClient(username, password, cancelToken).get(endpoint);
     
     if (response.ok){
         user=response.data

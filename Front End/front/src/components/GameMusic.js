@@ -1,6 +1,6 @@
 import { useState } from "react";
 // import useSound from 'use-sound';
-import music from '../shadows.mp3';
+import music from '../static/shadows.mp3';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import MusicOffIcon from '@mui/icons-material/MusicOff';
 // import {Howl} from 'howler';

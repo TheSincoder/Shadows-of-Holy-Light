@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import Login from './views/Login';
 import Logout from './views/Logout';
 import Register from './views/Register';
+import CharacterCreation from './views/CharacterCreation';
 import { ThemeProvider } from '@mui/material/styles';
 import shadowTheme from './themes/shadowTheme';
 import NavBar from './components/NavBar';
@@ -20,6 +21,7 @@ function App() {
   
       <Routes>
         <Route path="/" element={<HomePage/>}/>
+        <Route path="/create_character" element={<CharacterCreation/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/logout" element={<Logout/>}/>

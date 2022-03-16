@@ -25,7 +25,13 @@ def create_character():
             new_user_data = {
                 "name":form.name.data.title(),
                 "race":int(form.race.data),
-                "char_class":int(form.race.data)
+                "char_class":int(form.char_class.data),
+                "strength":int(form.strength.data),
+                "dexterity":int(form.dexterity.data),
+                "constitution":int(form.constitution.data),
+                "intelligence":int(form.intelligence.data),
+                "wisdom":int(form.wisdom.data),
+                "charisma":int(form.charisma.data),
             }
             #create an empty User
             new_user_object = CreateCharacter()

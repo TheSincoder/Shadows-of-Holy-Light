@@ -80,6 +80,12 @@ class Character(db.Model):
     off_hand = db.Column(db.String(50))
     armor = db.Column(db.Integer)
     unit = db.Column(db.Integer)
+    strength = db.Column(db.Integer)
+    dexterity = db.Column(db.Integer)
+    constitution = db.Column(db.Integer)
+    intelligence = db.Column(db.Integer)
+    wisdom = db.Column(db.Integer)
+    charisma = db.Column(db.Integer)
     character_item = db.relationship(
         'Item',
         secondary = 'char_item_join',

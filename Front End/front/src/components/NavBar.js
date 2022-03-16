@@ -27,10 +27,11 @@ export default function ButtonAppBar() {
             <MenuIcon />
           </IconButton>
           <img src='https://i.ibb.co/LnTB3gL/logo-no-stars1-removebg-preview.png' alt='logo' height='50px' display='flex' />
+          <Link to='/create_character' style={{color: 'inherit', textDecoration:"none"}}>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+            Create Character
           </Typography>
-
+          </Link>
           <Sound/> 
           {user?.token?
     <IconButton
