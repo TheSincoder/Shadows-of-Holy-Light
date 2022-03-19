@@ -4,14 +4,12 @@ import { useFormik } from 'formik';
 import Button from "../components/Button";
 // import {AppContext} from '../context/AppContext';
 // import ReactDOM from 'react-dom';
-import { Formik, Field } from 'formik';
 import Typography from '@mui/material/Typography';
 import RadioGroup from '@mui/material/RadioGroup';
 import TextField from '@mui/material/TextField';
 import Radio from '@mui/material/Radio';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Slider from '@mui/material/Slider';
-import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
 
@@ -32,25 +30,25 @@ const FormSchema = Yup.object({
 })
 
 //Defining the Images of each race
-const r1 = <img src={require("../static/images/human_male.jpg")} width={76} alt="Human Male"/>
-const r2 =  <img src={require("../static/images/human_female.jpg")} width={76} alt="Human Female"/>
-const r3 = <img src={require("../static/images/elf_male.jpg")} width={76} alt="Elf Male"/>
-const r4 = <img src={require("../static/images/elf_female.jpg")} width={76} alt="Elf Female"/>
-const r5 = <img src={require("../static/images/dwarf_male.jpg")} width={76} alt="Dwarf Male"/>
-const r6 = <img src={require("../static/images/dwarf_female.jpg")} width={76} alt="Dwarf Female"/>
-const r7 = <img src={require("../static/images/orc_male.jpg")} width={76} alt="Orc Male"/>
-const r8 = <img src={require("../static/images/orc_female.jpg")} width={76} alt="Orc Female"/>
-const r9 = <img src={require("../static/images/rusyon_male.jpg")} width={76} alt="Rusyon Male"/>
-const r10 = <img src={require("../static/images/rusyon_female.jpg")} width={76} alt="Rusyon Female"/>
-const r11 = <img src={require("../static/images/ervakt.jpg")} width={76} alt="Ervakt"/>
+const r1 = <img src={require("../static/images/human_male.jpg")} width={69} alt="Human Male"/>
+const r2 =  <img src={require("../static/images/human_female.jpg")} width={69} alt="Human Female"/>
+const r3 = <img src={require("../static/images/elf_male.jpg")} width={69} alt="Elf Male"/>
+const r4 = <img src={require("../static/images/elf_female.jpg")} width={69} alt="Elf Female"/>
+const r5 = <img src={require("../static/images/dwarf_male.jpg")} width={69} alt="Dwarf Male"/>
+const r6 = <img src={require("../static/images/dwarf_female.jpg")} width={69} alt="Dwarf Female"/>
+const r7 = <img src={require("../static/images/orc_male.jpg")} width={69} alt="Orc Male"/>
+const r8 = <img src={require("../static/images/orc_female.jpg")} width={69} alt="Orc Female"/>
+const r9 = <img src={require("../static/images/rusyon_male.jpg")} width={69} alt="Rusyon Male"/>
+const r10 = <img src={require("../static/images/rusyon_female.jpg")} width={69} alt="Rusyon Female"/>
+const r11 = <img src={require("../static/images/ervakt.jpg")} width={69} alt="Ervakt"/>
 
 //Defining the Images of each class
-const c1 = <img src={require("../static/images/cleric.jpg")} height={228} alt="Cleric"/>
-const c2 = <img src={require("../static/images/mage.jpg")} height={228} alt="Mage"/>
-const c3 = <img src={require("../static/images/monk.jpg")} height={228} alt="Monk"/>
-const c4 = <img src={require("../static/images/ranger.jpg")} height={228} alt="Ranger"/>
-const c5 = <img src={require("../static/images/rogue.jpg")} height={228} alt="Rogue"/>
-const c6 = <img src={require("../static/images/warrior.jpg")} height={228} alt="Warrior"/>
+const c1 = <img src={require("../static/images/cleric.jpg")} height={212} alt="Cleric"/>
+const c2 = <img src={require("../static/images/mage.jpg")} height={212} alt="Mage"/>
+const c3 = <img src={require("../static/images/monk.jpg")} height={212} alt="Monk"/>
+const c4 = <img src={require("../static/images/ranger.jpg")} height={212} alt="Ranger"/>
+const c5 = <img src={require("../static/images/rogue.jpg")} height={212} alt="Rogue"/>
+const c6 = <img src={require("../static/images/warrior.jpg")} height={212} alt="Warrior"/>
 
 //Defining the marks for the stat sliders
 const marks = [

@@ -4,12 +4,18 @@ from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
+from flask_cors import CORS
+import os
 # init the app
+
 
 login= LoginManager()
 # do inits for database stuff
 db = SQLAlchemy()
 migrate = Migrate()
+
+if os.environ.get('FLASK_ENV') == 'development':
+    cors= CORS()
 
 def create_app(config_class=Config):
     app = Flask(__name__)
@@ -21,6 +27,10 @@ def create_app(config_class=Config):
     db.init_app(app)
     migrate.init_app(app, db)
     # register plugins
+
+    #Cors
+    if os.environ.get('FLASK_ENV') == 'development':
+        cors.init_app(app)
     
     # send here when not logged in if trying to access login page
     login.login_view='auth.login'
@@ -33,6 +43,10 @@ def create_app(config_class=Config):
 
     from .blueprints.main import bp as main_bp
     app.register_blueprint(main_bp)
+
+    from .blueprints.api import bp as api_bp
+    app.register_blueprint(api_bp)
+
 
 
     

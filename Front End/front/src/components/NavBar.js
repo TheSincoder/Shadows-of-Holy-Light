@@ -26,32 +26,45 @@ export default function ButtonAppBar() {
           >
             <MenuIcon />
           </IconButton>
+          <Link to='/' style={{color: 'inherit', textDecoration:"none"}}>
           <img src='https://i.ibb.co/LnTB3gL/logo-no-stars1-removebg-preview.png' alt='logo' height='50px' display='flex' />
+          </Link>
+          
           <Link to='/create_character' style={{color: 'inherit', textDecoration:"none"}}>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Create Character
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, mx: 3, fontWeight:"bold"  }}>
+           CREATE CHARACTER
+          </Typography>
+          </Link>
+          <Link to='/races' style={{color: 'inherit', textDecoration:"none"}}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, mr: 3, fontWeight:"bold" }}>
+            RACES
+          </Typography>
+          </Link>
+          <Link to='/classes' style={{color: 'inherit', textDecoration:"none"}}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, mr: 3, fontWeight:"bold" }}>
+            CLASSES
           </Typography>
           </Link>
           <Sound/> 
           {user?.token?
     <IconButton
       size="large"
-      aria-label="show more"
+      aria-label="logout"
       aria-haspopup="true"
-     color="primary"
+     color="inherit"
     >
-      <Link to='/logout' style={{color: 'inherit', textDecoration:"none"}}>
+      <Link to='/logout' style={{color: 'inherit', textDecoration:"none", ml: 2}}>
     <LogoutIcon/>
         </Link>
     </IconButton>
         :
     <IconButton
       size="large"
-      aria-label="show more"
+      aria-label="login"
       aria-haspopup="true"              
       color="inherit"
     >
-      <Link to='/login' style={{color: 'inherit', textDecoration:"none"}}>                 
+      <Link to='/login' style={{color: 'inherit', textDecoration:"none", ml: 2}}>                 
     <LoginIcon/>
         </Link>
     </IconButton>

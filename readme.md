@@ -67,11 +67,18 @@ User can log in, create a basic character and play through one Quest with engagi
 
 #### Additional Elements beyond MVP (In Order of Importance)
 
-Add the Music
+Add the Music - Added
 Add The Shop
 An engaging storyline
 Add stats to the character and enemies for dynamic combat
 
+#### Actual Order of Tasks Accomplished
+Built Login, Logout and Register User forms
+Built NavBar
+Added Music and button to NavBar
+Built Character Creation Form
+Hook up Front End and Back End *Working on this now
+Build out Home Page
 
 #### Problems and How I solved them
 
@@ -84,5 +91,9 @@ Spent about 4 hours on it. Tried using the useSound documentation. Built in hook
 Spent another two hours on looping the music, had to use Howler.js. Looping the music broke the
 stop function. Had to call Howler.stop() instead of gameMusic.stop() and that worked!
 
+##### Radio Buttons
+After trying to use formik for about 4 hours, I reached out to Kevin for help. Kevin turned me to
+use Radio buttons straight from MUI and use it within the form like we did in class. (Why I didn't do that at the beginning the world may never know). After about 2 hours I had it figured out and it works!
 
-
+##### Connecting Front End to Back End
+Had to add Token to database in order to call it and use it. 

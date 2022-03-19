@@ -1,7 +1,8 @@
 from app import db, login
 from flask_login import UserMixin # This is just for the User Model!
-from datetime import datetime as dt
+from datetime import datetime as dt, timedelta
 from werkzeug.security import generate_password_hash, check_password_hash
+import secrets
 
 
 class UserCharJoin(db.Model):
@@ -21,9 +22,8 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(150), unique=True)
     password = db.Column(db.String(200))
     created_on = db.Column(db.DateTime, default = dt.utcnow)
-    wins = db.Column(db.Integer, default = 0)
-    losses = db.Column(db.Integer, default = 0)
-    battles = db.Column(db.Integer, default = 0 )
+    token = db.Column(db.String, index=True, unique=True)
+    token_exp = db.Column(db.DateTime)
     user_character = db.relationship(
         'Character',
         secondary = 'user_char_join',
@@ -31,6 +31,24 @@ class User(UserMixin, db.Model):
         lazy='dynamic'
     )
 
+    def get_token(self, exp=86400):
+        current_time = dt.utcnow()
+        if self.token and self.token_exp > current_time + timedelta(seconds=60):
+            return self.token
+        self.token = secrets.token_urlsafe(32)
+        self.token_exp = current_time + timedelta(seconds=exp)
+        self.save()
+        return self.token
+
+    def revoke_token(self):
+        self.token_exp = dt.utcnow() - timedelta(seconds=61)
+
+    @staticmethod
+    def check_token(token):
+        u = User.query.filter_by(token=token).first()
+        if not u or u.token_exp < dt.utcnow():
+            return None
+        return u
 
     def __repr__(self):
         return f'<User: {self.id} | {self.email}>'
@@ -47,8 +65,16 @@ class User(UserMixin, db.Model):
         self.last_name = data['last_name']
         self.email = data['email']
         self.password = self.hash_password(data['password'])
-        self.wins = 0
-        self.losses = 0
+
+    def to_dict(self):
+        return {
+            "user_id": self.id,
+            "username": self.username,              
+            "first_name":self.first_name,
+            "last_name":self.last_name,
+            "email": self.email,
+        }
+       
 
     # saves the user to the database
     def save(self):

@@ -11,13 +11,13 @@ import {Link} from 'react-router-dom';
 
 const FormSchema = Yup.object(
     {
-        email: Yup.string().email("Must be a valid e-mail format").required(),
+        username: Yup.string().required(),
         password: Yup.string().required()
     }
 )
 
 const initialValues ={
-    email: "",
+    username: "",
     password: ""
 }
 
@@ -31,6 +31,7 @@ export default function LoginForm() {
 
     const handleSubmit=async (values)=>{
         setLoginCreds(values)
+        console.log('Logged In(from Form)')
     }
 
 
@@ -44,16 +45,16 @@ export default function LoginForm() {
   return (
     <form onSubmit={formik.handleSubmit}>
         <TextField
-            id="email"
-            name="email"
+            id="username"
+            name="username"
             fullWidth
             sx={{mb:2, mt:2}}
-            label="email"
-            placeholder="email"
-            value={formik.values.email}
+            label="username"
+            placeholder="username"
+            value={formik.values.username}
             onChange={formik.handleChange}
-            error={formik.touched.email && Boolean(formik.errors.email)}
-            helperText={formik.touched.email && formik.errors.email}
+            error={formik.touched.username && Boolean(formik.errors.username)}
+            helperText={formik.touched.username && formik.errors.username}
         />
         <TextField
             id="password"

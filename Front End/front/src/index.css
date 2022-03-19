@@ -7,6 +7,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: "ShadowsIntoLight";
+  src: local("ShadowsIntoLight"), 
+  url("../src/fonts/ShadowsIntoLight/ShadowsIntoLight-Regular.ttf") format("truetype");
+  font-weight: normal;
+
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

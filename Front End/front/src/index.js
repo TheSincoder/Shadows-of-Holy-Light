@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import AppContextProvider from "./context/AppContext";
 import {BrowserRouter} from 'react-router-dom';
+import '../src/fonts/ShadowsIntoLight/ShadowsIntoLight-Regular.ttf'
 
 ReactDOM.render(
   <React.StrictMode>

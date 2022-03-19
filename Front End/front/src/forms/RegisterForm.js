@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import useEditUser from '../hooks/useEditUser';
+import useRegister from '../hooks/useRegister';
 import {AppContext} from '../context/AppContext';
 
 
@@ -12,8 +13,9 @@ import {AppContext} from '../context/AppContext';
 
 
 const FormSchema = Yup.object({
-    "firstName":Yup.string().required("Required"),
-    "lastName":Yup.string().required("Required"),
+    "username":Yup.string().required("Required"),
+    "first_name":Yup.string().required("Required"),
+    "last_name":Yup.string().required("Required"),
     "email": Yup.string().email("Must be a valid e-mail format").required(),
     "password": Yup.string().required("Required")
 })
@@ -21,22 +23,27 @@ const FormSchema = Yup.object({
 
 export default function RegisterForm() {
     const {user} = useContext(AppContext)
+    const [newUser, setNewUser] = useState({})
     const [editUser, setEditUser] = useState({})
     
     useEditUser(editUser)
+    useRegister(newUser, setNewUser)
     
-
+    
     const initialValues={
-        firstName:user?.firstName ?? '',
-        lastName:user?.lastName ?? '',
+        username:user?.username ?? '',
+        first_name:user?.first_name ?? '',
+        last_name:user?.last_name ?? '',
         email:user?.email ?? '',
         password:user?.password ?? ''        
     }
-
+    
+    useRegister({user})
+    
     const handleSubmit =(values,resetForm)=>{
         console.log(values)
-        if(!user){
-            console.log('User Created')
+        if(!user?.token){
+            setNewUser(values)
         }else{
             setEditUser({...values, id:user.id})
         }
@@ -55,31 +62,44 @@ export default function RegisterForm() {
 
   return (
     <form onSubmit={formik.handleSubmit}>
+        <TextField
+        fullWidth
+        id="username"
+        name="username"
+        type="text"
+        sx={{ mt: 2 }}
+        label="Username"
+        placeholder="Seymour"
+        value={formik.values.username}
+        onChange={formik.handleChange}
+        error={formik.touched.username && Boolean(formik.errors.username)}
+        helperText={formik.touched.username && formik.errors.username}
+    />
     <TextField
         fullWidth
-        id="firstName"
-        name="firstName"
+        id="first_name"
+        name="first_name"
         type="text"
         sx={{ mb: 2, mt: 2 }}
         label="First Name"
         placeholder="Seymour"
-        value={formik.values.firstName}
+        value={formik.values.first_name}
         onChange={formik.handleChange}
-        error={formik.touched.firstName && Boolean(formik.errors.firstName)}
-        helperText={formik.touched.firstName && formik.errors.firstName}
+        error={formik.touched.first_name && Boolean(formik.errors.first_name)}
+        helperText={formik.touched.first_name && formik.errors.first_name}
     />
     <TextField
         fullWidth
-        id="lastName"
-        name="lastName"
+        id="last_name"
+        name="last_name"
         sx={{mb: 2 }}
         type="text"
         label="Last Name"
         placeholder="Nakamoto"
-        value={formik.values.lastName}
+        value={formik.values.last_name}
         onChange={formik.handleChange}
-        error={formik.touched.lastName && Boolean(formik.errors.lastName)}
-        helperText={formik.touched.lastName && formik.errors.lastName}
+        error={formik.touched.last_name && Boolean(formik.errors.last_name)}
+        helperText={formik.touched.last_name && formik.errors.last_name}
     />
     <TextField
             fullWidth
