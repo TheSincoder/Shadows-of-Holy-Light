@@ -27,8 +27,8 @@ export default function Races() {
           Humans
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Due to a mutli-plane war, there are fewer Humans than any other race on Chando. They are nomadic in nature, often work as travelling
-          merchants, guards or take other odd jobs. There is one Human city on Chando, Hollow Bay, which remains neutral in conflicts and focuses on trade 
+          Due to a mutli-plane war, there are fewer Humans than any other race on Asteria. They are nomadic in nature, often work as travelling
+          merchants, guards or take other odd jobs. There is one Human city on Asteria, Hollow Bay, which remains neutral in conflicts and focuses on trade 
           Humans have a natural affinity with Charisma getting +1 to the stat.
         </Typography>
       </CardContent>
@@ -47,7 +47,7 @@ export default function Races() {
         Elves
       </Typography>
       <Typography variant="body2" color="text.secondary">
-        Elves reside in the forests and jungles on Chando, building great cities in the tree tops. If you were
+        Elves reside in the forests and jungles on Asteria, building great cities in the tree tops. If you were
         to travel through a forest, you would like miss the cities hidden in vines and crowns of great trees. 
         Elvish culture is centered around the Arcane Wells which their cities are built to protect. Having a natural affinity
         to Magic, Elvish Mages are often the most powerful and get a +1 to Wisdom. 
@@ -91,10 +91,10 @@ export default function Races() {
       </Typography>
       <Typography variant="body2" color="text.secondary">
         Orcs are not the simple minded people the Elves and Dwarves believe them to be. 
-        They are by far the strongest, but have built great cities in the plains of Chando,
+        They are by far the strongest, but have built great cities in the plains of Asteria,
         rivaling those of other socities. Some Orcs have trained with Elven Mages and some 
         have learned technology from the Dwarves. This combined with their strength have made
-        the Orcs the center for international relations between the races of Chando. Orcs get
+        the Orcs the center for international relations between the races of Asteria. Orcs get
         a +1 to Strength. 
       </Typography>
     </CardContent>
@@ -114,9 +114,9 @@ export default function Races() {
         Rusyon
       </Typography>
       <Typography variant="body2" color="text.secondary">
-        Rusyon are the only race indigenous to Chando. They are weary of the newcomers
+        Rusyon are the only race indigenous to Asteria. They are weary of the newcomers
         and their lack of respect for the planes natural resources. To defend themselves
-        from the newcomers pilgrimage and the monsters of Chando, Rusyon have learned 
+        from the newcomers pilgrimage and the monsters of Asteria, Rusyon have learned 
         to be skilled with almost any weapon. Rusyon have a +1 to Dexterity. 
       </Typography>
     </CardContent>

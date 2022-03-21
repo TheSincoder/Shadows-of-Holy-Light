@@ -1,11 +1,11 @@
-import apiClientTokenAuth from './clientTokenAuth'
+import apiClientNoAuth from './clientNoAuth';
 
 
-const endpoint = '/create-character'
+
+const endpoint = '/api/create_character'
 
 
-export const postUser = async(name, race, char_class, strength, dexterity, constitution, intelligence, wisdom, charisma, canceltoken)=>{
-    const response = await apiClientTokenAuth(token).post(endpoint,{name:name, race:race, char_class:char_class, 
-        strength:strength, dexterity:dexterity, constitution:constitution, intelligence:intelligence, wisdom:wisdom, charisma:charisma});
+export const postCharacter = async(data, cancelToken)=>{
+    const response = await apiClientNoAuth(cancelToken).post(endpoint,data);
     return response.ok
 }

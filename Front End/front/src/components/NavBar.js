@@ -30,8 +30,13 @@ export default function ButtonAppBar() {
           <img src='https://i.ibb.co/LnTB3gL/logo-no-stars1-removebg-preview.png' alt='logo' height='50px' display='flex' />
           </Link>
           
-          <Link to='/create_character' style={{color: 'inherit', textDecoration:"none"}}>
+          <Link to='/play' style={{color: 'inherit', textDecoration:"none"}}>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, mx: 3, fontWeight:"bold"  }}>
+           PLAY
+          </Typography>
+          </Link>
+          <Link to='/create_character' style={{color: 'inherit', textDecoration:"none"}}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, mr: 3, fontWeight:"bold"  }}>
            CREATE CHARACTER
           </Typography>
           </Link>

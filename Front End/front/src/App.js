@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import HomePage from './views/HomePage';
+import Play from './views/Play';
+import ChapterOne from './views/ChapterOne';
 import Races from './views/Races';
 import Classes from './views/Classes';
 import Login from './views/Login';
@@ -22,6 +24,8 @@ function App() {
   
       <Routes>
         <Route path="/" element={<HomePage/>}/>
+        <Route path="/play" element={<Play/>}/>
+        <Route path="/chapter-1" element={<ChapterOne/>}/>
         <Route path="/races" element={<Races/>}/>
         <Route path="/classes" element={<Classes/>}/>
         <Route path="/create_character" element={<CharacterCreation/>}/>

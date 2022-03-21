@@ -1,5 +1,5 @@
 from . import bp as api
-from app.models import User
+from app.models import User, Character
 from flask import make_response, g, abort,request
 from flask_httpauth import HTTPBasicAuth, HTTPTokenAuth
 
@@ -58,4 +58,33 @@ def post_user():
     new_user = User()
     new_user.from_dict(data)
     new_user.save()
+    return make_response("success",200)
+
+@api.get('/character')
+@basic_auth.login_required()
+def get_character():
+    character = User.user_character
+    token = character.get_token()
+    return make_response({"token":token, **character.to_dict()}, 200)
+
+@api.post('/create_character')
+def post_character():
+    '''
+        No Auth
+        creates a new character.
+        expected payload:
+        {
+            "name" : STRING,
+            .....
+            
+        }
+    '''
+    data = request.get_json()
+    print(data, 'just data')
+    print(data.get('name'), 'data.get')
+    if Character.query.filter_by(name=data.get('name')).first():
+        abort(422)
+    new_character = Character()
+    new_character.from_dict(data)
+    new_character.save()
     return make_response("success",200)

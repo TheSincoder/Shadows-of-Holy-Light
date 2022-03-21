@@ -15,7 +15,7 @@ def index():
 def adventure():
     return render_template('adventure.html.j2')
 
-@main.route('/create_character', methods=['GET'])
+@main.route('/create_character', methods=['POST'])
 @login_required
 def create_character():
     form = CreateCharacter()

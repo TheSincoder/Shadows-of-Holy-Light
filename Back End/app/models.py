@@ -118,6 +118,33 @@ class Character(db.Model):
         backref= 'characters',        
         lazy='dynamic'
     )
+
+    def from_dict(self, data):
+        self.name = data['name']
+        self.race = data['race']
+        self.char_class = data['char_class']
+        self.strength = data['strength']
+        self.dexterity = data['dexterity']
+        self.constitution = data['constitution']
+        self.intelligence = data['intelligence']
+        self.wisdom = data['wisdom']
+        self.charisma = data['charisma']
+
+    def to_dict(self):
+        return {
+            "char_id": self.id,
+            "name": self.name,              
+            "race":self.race,
+            "char_class":self.char_class,
+            "strength": self.strength,
+            "dexterity": self.dexterity,
+            "constitution": self.constitution,
+            "intelligence": self.intelligence,
+            "wisdom": self.wisdom,
+            "charisma": self.charisma,
+        }
+        
+
     
 class Item(db.Model):
     __tablename__ = 'item'
