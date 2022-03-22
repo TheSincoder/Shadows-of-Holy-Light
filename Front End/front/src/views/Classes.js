@@ -23,7 +23,7 @@ export default function Classes() {
         alt="Humans"
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" color="text.secondary" component="div">
+        <Typography gutterBottom variant="h5" color="primary.main" component="div">
           Cleric
         </Typography>
         <Typography variant="body2" color="text.secondary">
@@ -42,7 +42,7 @@ export default function Classes() {
       alt="Ranger"
     />
     <CardContent>
-      <Typography gutterBottom variant="h5" color="text.secondary" component="div">
+      <Typography gutterBottom variant="h5" color="primary.main" component="div">
         Ranger
       </Typography>
       <Typography variant="body2" color="text.secondary">
@@ -62,7 +62,7 @@ export default function Classes() {
       alt="Rogue"
     />
     <CardContent>
-      <Typography gutterBottom variant="h5" color="text.secondary" component="div">
+      <Typography gutterBottom variant="h5" color="primary.main" component="div">
         Rogue
       </Typography>
       <Typography variant="body2" color="text.secondary">
@@ -83,7 +83,7 @@ export default function Classes() {
       alt="Mage"
     />
     <CardContent>
-      <Typography gutterBottom variant="h5" color="text.secondary" component="div">
+      <Typography gutterBottom variant="h5" color="primary.main" component="div">
         Mage
       </Typography>
       <Typography variant="body2" color="text.secondary">
@@ -105,7 +105,7 @@ export default function Classes() {
       alt="Monk"
     />
     <CardContent>
-      <Typography gutterBottom variant="h5" color="text.secondary" component="div">
+      <Typography gutterBottom variant="h5" color="primary.main" component="div">
         Monk
       </Typography>
       <Typography variant="body2" color="text.secondary">
@@ -125,7 +125,7 @@ export default function Classes() {
       alt="Warrior"
     />
     <CardContent>
-      <Typography gutterBottom variant="h5" color="text.secondary" component="div">
+      <Typography gutterBottom variant="h5" color="primary.main" component="div">
         Warrior
       </Typography>
       <Typography variant="body2" color="text.secondary">

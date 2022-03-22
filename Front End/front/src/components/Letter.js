@@ -55,7 +55,7 @@ export default function Letter(){
                     Lord Crowvus
                     </h1>
                 </div>
-                <Box  sx={{ position: 'fixed', bottom: -80, right: 80 }}>{wax}</Box>
+                <Box  sx={{ position: 'absolute', bottom: -80, right: 80 }}>{wax}</Box>
             </Paper>
             
             

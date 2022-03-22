@@ -10,7 +10,7 @@ export default function CharacterCreation() {
 
   return (
       <>
-    <Paper sx={{m:5, p:5, justifyContent:"center", backgroundColor: theme.palette.background.default, backgroundImage:theme.palette.background.paper}}>
+    <Paper sx={{m:5, p:5, justifyContent:"center", backgroundColor: theme.palette.background.paper, backgroundImage:theme.palette.background.paper}}>
         <Typography color='primary' variant="h4"><strong>Shadows of Holy Light:</strong></Typography>
         <br/>
         <Link to='/chapter-1' style={{color: 'inherit', textDecoration:"none"}}>

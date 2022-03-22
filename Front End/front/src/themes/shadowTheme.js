@@ -4,14 +4,14 @@ export const themeOptions = {
   palette: {
     type: 'light',
     primary: {
-      main: '#f0a500',
+      main: '#024c42',
     },
     secondary: {
-      main: '#150050',
+      main: '#1b59a0',
     },
     background: {
-      default: '#334756',
-      paper: '#082032',
+      default: '#0a0a0a',
+      paper: '#696969',
     },
     error: {
       main: '#fd0303',
@@ -24,7 +24,7 @@ export const themeOptions = {
     },
     text: {
       primary: '#000000',
-      secondary: '#ffee58',
+      secondary: '#ffffff',
       hint: '#ffff00',
     },
   },
@@ -33,3 +33,4 @@ export const themeOptions = {
 const theme = createTheme(themeOptions);
 
 export default theme
+

@@ -23,7 +23,7 @@ export default function Races() {
         alt="Humans"
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" color="text.secondary" component="div">
+        <Typography gutterBottom variant="h5" color="primary.main" component="div">
           Humans
         </Typography>
         <Typography variant="body2" color="text.secondary">
@@ -43,7 +43,7 @@ export default function Races() {
       alt="Elves"
     />
     <CardContent>
-      <Typography gutterBottom variant="h5" color="text.secondary" component="div">
+      <Typography gutterBottom variant="h5" color="primary.main" component="div">
         Elves
       </Typography>
       <Typography variant="body2" color="text.secondary">
@@ -64,7 +64,7 @@ export default function Races() {
       alt="Dwarves"
     />
     <CardContent>
-      <Typography gutterBottom variant="h5" color="text.secondary" component="div">
+      <Typography gutterBottom variant="h5" color="primary.main" component="div">
         Dwarves
       </Typography>
       <Typography variant="body2" color="text.secondary">
@@ -86,7 +86,7 @@ export default function Races() {
       alt="Orcs"
     />
     <CardContent>
-      <Typography gutterBottom variant="h5" color="text.secondary" component="div">
+      <Typography gutterBottom variant="h5" color="primary.main" component="div">
         Orcs
       </Typography>
       <Typography variant="body2" color="text.secondary">
@@ -110,7 +110,7 @@ export default function Races() {
       alt="Rusyon"
     />
     <CardContent>
-      <Typography gutterBottom variant="h5" color="text.secondary" component="div">
+      <Typography gutterBottom variant="h5" color="primary.main" component="div">
         Rusyon
       </Typography>
       <Typography variant="body2" color="text.secondary">
@@ -131,7 +131,7 @@ export default function Races() {
       alt="Ervakt"
     />
     <CardContent>
-      <Typography gutterBottom variant="h5" color="text.secondary" component="div">
+      <Typography gutterBottom variant="h5" color="primary.main" component="div">
         Ervakt
       </Typography>
       <Typography variant="body2" color="text.secondary">

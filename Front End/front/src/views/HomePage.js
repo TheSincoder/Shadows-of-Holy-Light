@@ -8,7 +8,7 @@ export default function HomePage() {
 
     return(
         <>       
-            <Paper sx={{m:5, p:5, justifyContent:"center", backgroundColor: theme.palette.background.default}}>
+            <Paper sx={{m:5, p:5, justifyContent:"center", backgroundColor: theme.palette.background.paper}}>
             <Typography color='primary' variant="h4"><strong>Welcome to Asteria</strong></Typography>
             <br/>
             <Typography>
