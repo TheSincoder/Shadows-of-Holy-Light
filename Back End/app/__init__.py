@@ -1,5 +1,5 @@
 # Initializing things
-from flask import Flask
+from flask import Flask, send_from_directory
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -18,7 +18,7 @@ if os.environ.get('FLASK_ENV') == 'development':
     cors= CORS()
 
 def create_app(config_class=Config):
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder='../client/build', static_url_path='/')
     # init my Login Manager
     app.config.from_object(config_class)
     # link our config to our app
@@ -37,6 +37,15 @@ def create_app(config_class=Config):
     login.login_message = "Please Login to enter the Shadow of Holy Light Game"
     login.login_message_category='light'
 
+    
+
+    @app.route('/')
+    def serve():
+        return send_from_directory(app.static_folder, 'index.html')
+
+    @app.errorhandler(404)
+    def not_found(e):
+        return app.send_static_file('index.html')
 
     from .blueprints.auth import bp as auth_bp
     app.register_blueprint(auth_bp)
