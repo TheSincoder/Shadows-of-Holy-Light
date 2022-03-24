@@ -19,7 +19,7 @@ export default function HomePage() {
                 <br/> 
             <Typography>
                 As the complexities of colonies unfold, life for the average citizen can be dull at best and cruel at worst. 
-                Technology, Arcane and Blessing from Deities are used for comfort and protection, but the horrors of unknown lands,
+                Technology, Arcane and Blessings from Deities are used for comfort and protection, but the horrors of unknown lands,
                 beasts and powers loom large over society. Adventurers often find that greed and promise of power make people bigger 
                 monsters than the beasts they encounter.
                 </Typography>   

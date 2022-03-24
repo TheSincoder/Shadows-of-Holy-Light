@@ -79,6 +79,8 @@ Added Music and button to NavBar
 Built Character Creation Form
 Hook up Front End and Back End *Working on this now
 Build out Home Page
+Built out Play page
+Built Chapter One Story
 
 #### Problems and How I solved them
 
@@ -97,3 +99,11 @@ use Radio buttons straight from MUI and use it within the form like we did in cl
 
 ##### Connecting Front End to Back End
 Had to add Token to database in order to call it and use it. 
+
+####
+For the sake of time and lack of skill I abandoned the combat element and went
+with the storyline. 
+
+#### What I Learned
+I learned how to add music, that was fun!
+Building out the storyline was a very long process
